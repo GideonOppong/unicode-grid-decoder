@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unicode Grid Decoder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🔐 Unicode Grid Decoder</h1>
+
+    <form method="post" action="/decode">
+        <input type="text" name="url" placeholder="Enter Google Doc URL" required>
+        <button type="submit">Decode</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if grid %}
+        <h2>Decoded Message</h2>
+        <pre>{{ grid }}</pre>
+
+        <h2>Image Output</h2>
+        <img src="{{ image }}" alt="Decoded Image">
+    {% endif %}
+</body>
+</html>
