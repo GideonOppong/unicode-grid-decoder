@@ -1,0 +1,26 @@
+import argparse
+from parser import fetch_data, parse_points
+from decoder import build_grid
+from renderer import print_grid, save_as_image
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Decode a Unicode grid message")
+    parser.add_argument("url", help="Google Doc URL")
+    parser.add_argument("--image", action="store_true", help="Save output as image")
+
+    args = parser.parse_args()
+
+    lines = fetch_data(args.url)
+    points, max_x, max_y = parse_points(lines)
+    grid = build_grid(points, max_x, max_y)
+
+    print_grid(grid)
+
+    if args.image:
+        save_as_image(grid)
+        print("\nImage saved to output/message.png")
+
+
+if __name__ == "__main__":
+    main()
