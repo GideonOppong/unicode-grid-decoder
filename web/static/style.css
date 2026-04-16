@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+input {
+    width: 400px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+pre {
+    background: #111;
+    color: #0f0;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.error {
+    color: red;
+}
