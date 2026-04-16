@@ -1,2 +1,14 @@
-# unicode-grid-decoder
-I built a Python tool that decodes hidden messages from structured coordinate data in a Google Doc. It dynamically constructs a 2D grid and renders ASCII-style output. This project demonstrates my ability to work with external data sources, parsing logic, and data visualization.
+## ⚡ Advanced Features
+
+- 🖥 Command-line interface (CLI)
+- 🖼 Export decoded message as PNG image
+- 🧱 Modular architecture (parser, decoder, renderer)
+- ⚠️ Error handling for network failures
+- 🧪 Unit testing with pytest
+
+---
+
+## ▶️ CLI Usage
+
+```bash
+python src/cli.py <URL>
